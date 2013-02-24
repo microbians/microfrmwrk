@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<svg id="svgcanvas">
+		</svg>
+		<script>
+			var twocircles='<circle cx="253" cy="562" r="10" stroke="black" stroke-width="2" fill="red"></circle> \
+			<circle cx="353" cy="562" r="10" stroke="black" stroke-width="2" fill="red"></circle>'
+			var receptacle = document.createElement('div');
+			var svgfragment='<svg>'+twocircles+'</svg>';
+			receptacle.innerHTML=''+svgfragment;
+			var Nodes=Array.prototype.slice.call(receptacle.childNodes[0].childNodes);
+			Nodes.forEach(function(el){document.getElementById('svgcanvas').appendChild(el)})
+		</script>
+	</body>
+</html>

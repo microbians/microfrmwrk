@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <style type="text/css">
+		/* MICRO RESET */
+		* { 
+			outline: 0;
+			margin:  0;
+			padding: 0;
+			border:  0;
+		}
+		body {
+			height: 	100%;
+			width: 		100%;
+			font: 		1em Helvetica, Arial, sans-serif;;
+		}
+	</style>
+  	<style type="text/css">
+		/* MICRO RESET */
+		#block1 {
+			position: 	absolute;
+			display: 	table;
+			top: 		100px;
+			left: 		100px;
+			width: 		150px;
+			height: 	150px;
+			background: red;
+		}
+		.center {
+			display: 		table-cell;
+			vertical-align: middle;
+			text-align: 	center;
+		}
+		#hello {
+			background: blue;			
+		}
+		#pepe {
+			background: green;
+		}
+		#juan {
+			background: brown;
+		}
+		#LL {
+			background: magenta;
+		}
+  </style>
+<script src="../microfrmwrk.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	<!--
+		$('#img1').ready(function(){
+			console.log(this.width);
+		});
+	
+		var el=$("body").find('li');
+		
+		el.css("background-color","blue")
+	
+		el.css("width", function(index) {
+			console.log(index)
+		  	return (index+1) * 50;
+		});
+		
+		console.log(el.css("width"))
+		
+		// el.append('<svg width="80" height="80" version="1.1"><circle id="CIR" cx="40" cy="40" r="36" stroke="black" stroke-width="4" fill="red" /></svg>');
+		
+		var el=$('span', el);
+		el.css({width:'400px',height:'500px'});
+		el.css({backgroundColor:'grey'});
+		var el=el.find('div');
+		el.css({backgroundColor:'blue'});
+		
+		$("li").each(function(){
+			var r=parseInt(Math.random()*255);
+			var g=parseInt(Math.random()*255);
+			var b=parseInt(Math.random()*255);
+			var c='rgb('+r+','+g+','+b+')';
+			$(this).css({backgroundColor:c});
+		});
+		var s='<svg width="'+1200+'" height="'+1200+'" version="1.1">';
+		for (i=0; i<50; i++) {
+			var x=Math.floor(Math.random()*600);
+			var y=Math.floor(Math.random()*600);
+			s+='<circle onmouseout="this.setAttribute(\'fill\',\'blue\')" onmouseover="this.setAttribute(\'fill\',\'green\')" id="CIR'+i+'" cx="'+x+'" cy="'+y+'" r="10" stroke="black" stroke-width="2" fill="red" />';
+		}
+		s+='</svg>';
+		$("body").append(s);
+				
+		var el=$('ul');
+		
+		var el1=$('<div id="pepe">pepe<span id="juan">juan</span></div><div id="LL">ll</div>');
+		var el2=$('ul').add(el1).css({backgroundColor:'grey'});
+		
+		el1[0].setAttribute("eo","1");
+	
+		$("li","span").css({backgroundColor:'grey'});
+		
+	//-->
+	});
+</script>
+
+</head>
+<body>
+	<div id="block1">
+		<!--<img id="img1" src="http://www.gregisfishing.com/WEB%20IMAGES/Bart%20ND%20Paddlefish.jpg" width="100" height="100"/>-->
+		<span class="center">
+		1
+			<div>TEST</div>
+		2
+		</span>
+		<ul>
+			<li>op1</li>
+			<li>op2</li>
+			<li>op3</li>
+		</ul>
+		<iframe id="R"></iframe>
+	</div>
+</body>
+</html>

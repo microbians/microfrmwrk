@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <style type="text/css">
+		/* MICRO RESET */
+		* { 
+			outline: 0;
+			margin:  0;
+			padding: 0;
+			border:  0;
+		}
+		body {
+			height: 	100%;
+			width: 		100%;
+			font: 		1em Helvetica, Arial, sans-serif;;
+		}
+	</style>
+  	<style type="text/css">
+		/* MICRO RESET */
+		#block1 {
+			position: 	absolute;
+			display: 	table;
+			top: 		100px;
+			left: 		100px;
+			width: 		150px;
+			height: 	150px;
+			background: red;
+		}
+		.center {
+			display: 		table-cell;
+			vertical-align: middle;
+			text-align: 	center;
+		}
+		#hello {
+			background: blue;			
+		}
+		#pepe {
+			background: green;
+		}
+		#juan {
+			background: brown;
+		}
+		#LL {
+			background: magenta;
+		}
+  </style>
+<script src="../microfrmwrk.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	<!--
+		$("body").append('<div id="p">pepe</div>');
+		$("#p").append('<p id="h">hola</p>');
+	
+		var s='<svg id="svgcanvas" width="'+800+'" height="'+600+'">';
+		s+='</svg>';
+
+		$("body").append(s);
+
+		var s='';
+		for (i=0; i<10; i++) {
+			var x=Math.floor(Math.random()*800);
+			var y=Math.floor(Math.random()*600);
+			s='<circle id="CIR'+i+'" onmouseout="this.setAttribute(\'fill\',\'blue\')" onmouseover="this.setAttribute(\'fill\',\'green\')" cx="'+x+'" cy="'+y+'" r="10" stroke="black" stroke-width="2" fill="red" />';
+			$("#svgcanvas").append(s);
+		}
+		
+		var x=Math.floor(Math.random()*800);
+		var y=Math.floor(Math.random()*600);
+		s=$('<circle onmouseout="this.setAttribute(\'fill\',\'blue\')" onmouseover="this.setAttribute(\'fill\',\'green\')" id="CIRCULON" cx="'+x+'" cy="'+y+'" r="100" stroke="black" stroke-width="2" fill="grey" opacity=".5"/>');
+		$("#svgcanvas").append(s);
+		
+		console.log($("#CIRCULON").attr('fill'));
+		$("#CIRCULON").attr('fill','blue').attr('r','10');
+		console.log($("#CIRCULON").attr('fill'));
+		$('circle').attr('r','20');				
+	//-->
+	});
+</script>
+
+</head>
+<body>
+</body>
+</html>
